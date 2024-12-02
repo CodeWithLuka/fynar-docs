@@ -8,7 +8,8 @@ const DocumentIdPage = async ({ params }: DocumentIdPageProps) => {
 	const { documentId } = await params;
 
 	return (
-		<div className="min-h-screen bg-[#FAFBFD]">
+		<div>
+			DocumentId: {documentId}
 			<Editor />
 		</div>
 	);

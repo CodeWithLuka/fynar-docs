@@ -42,7 +42,9 @@ interface ToolbarButtonProps {
 const LinkButton = () => {
 	const { editor } = useEditorStore();
 
-	const [value, setValue] = useState("");
+	const [value, setValue] = useState(
+		editor?.getAttributes("link").href || "",
+	);
 
 	const onChange = (href: string) => {
 		editor?.chain().focus().extendMarkRange("link").setLink({ href }).run();
@@ -51,13 +53,7 @@ const LinkButton = () => {
 	};
 
 	return (
-		<DropdownMenu
-			onOpenChange={(open) => {
-				if (open) {
-					setValue(editor?.getAttributes("link").href || "");
-				}
-			}}
-		>
+		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
 				<button className="h-7 min-w-7 shrink-0 flex flex-col items-center justify-center rounded-sm hover:bg-neutral-200/80 px-1.5 overflow-hidden text-sm">
 					<Link2Icon className="size-4" />

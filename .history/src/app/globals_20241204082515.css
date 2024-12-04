@@ -195,11 +195,11 @@ body {
 
 	/* Link styles */
 	a {
-		@apply text-blue-600;
+		color: var(--purple);
 		cursor: pointer;
 
 		&:hover {
-			@apply underline;
+			color: var(--purple-contrast);
 		}
 	}
 

@@ -1,10 +1,8 @@
 "use client";
 
 import { useEditor, EditorContent } from "@tiptap/react";
-import { Color } from "@tiptap/extension-color";
 import Dropcursor from "@tiptap/extension-dropcursor";
 import FontFamily from "@tiptap/extension-font-family";
-import Highlight from "@tiptap/extension-highlight";
 import Image from "@tiptap/extension-image";
 import ImageResize from "tiptap-extension-resize-image";
 import StarterKit from "@tiptap/starter-kit";
@@ -14,8 +12,6 @@ import Table from "@tiptap/extension-table";
 import TableCell from "@tiptap/extension-table-cell";
 import TableHeader from "@tiptap/extension-table-header";
 import TableRow from "@tiptap/extension-table-row";
-import Text from "@tiptap/extension-text";
-import TextStyle from "@tiptap/extension-text-style";
 import Underline from "@tiptap/extension-underline";
 
 import { useEditorStore } from "@/store/use-editor-store";
@@ -55,10 +51,8 @@ export const Editor = () => {
 			},
 		},
 		extensions: [
-			Color,
 			Dropcursor,
 			FontFamily,
-			Highlight.configure({ multicolor: true }),
 			Image,
 			ImageResize,
 			StarterKit,
@@ -72,8 +66,6 @@ export const Editor = () => {
 			TaskItem.configure({
 				nested: true,
 			}),
-			Text,
-			TextStyle,
 			Underline,
 		],
 		content: `

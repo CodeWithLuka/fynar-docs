@@ -66,7 +66,10 @@ export const Editor = () => {
 			Highlight.configure({ multicolor: true }),
 			Image,
 			ImageResize,
-			LineHeightExtension,
+			LineHeightExtension.configure({
+				types: ["heading", "paragraph"],
+				defaultLineHeight: "normal",
+			}),
 			Link.configure({
 				openOnClick: false,
 				autolink: true,

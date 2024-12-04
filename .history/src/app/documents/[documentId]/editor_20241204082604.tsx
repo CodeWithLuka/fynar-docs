@@ -16,12 +16,9 @@ import TableCell from "@tiptap/extension-table-cell";
 import TableHeader from "@tiptap/extension-table-header";
 import TableRow from "@tiptap/extension-table-row";
 import Text from "@tiptap/extension-text";
-import TextAlign from "@tiptap/extension-text-align";
 import TextStyle from "@tiptap/extension-text-style";
 import Underline from "@tiptap/extension-underline";
 
-import { FontSizeExtension } from "@/extensions/font-size";
-import { LineHeightExtension } from "@/extensions/line-height";
 import { useEditorStore } from "@/store/use-editor-store";
 
 export const Editor = () => {
@@ -62,11 +59,9 @@ export const Editor = () => {
 			Color,
 			Dropcursor,
 			FontFamily,
-			FontSizeExtension,
 			Highlight.configure({ multicolor: true }),
 			Image,
 			ImageResize,
-			LineHeightExtension,
 			Link.configure({
 				openOnClick: false,
 				autolink: true,
@@ -150,9 +145,6 @@ export const Editor = () => {
 				nested: true,
 			}),
 			Text,
-			TextAlign.configure({
-				types: ["heading", "paragraph"],
-			}),
 			TextStyle,
 			Underline,
 		],

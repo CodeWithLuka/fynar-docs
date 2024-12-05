@@ -159,6 +159,9 @@ export const Editor = () => {
 			TextStyle,
 			Underline,
 		],
+		content: `
+        <p>Hello Emmanuel</p>
+      `,
 	});
 
 	return (

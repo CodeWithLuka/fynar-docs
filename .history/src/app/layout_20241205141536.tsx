@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { NuqsAdapter } from "nuqs/adapters/next/app";
 
 import "./globals.css";
 
@@ -35,9 +34,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={` antialiased`}>
-				<NuqsAdapter>{children}</NuqsAdapter>
-			</body>
+			<body className={` antialiased`}>{children}</body>
 		</html>
 	);
 }
